@@ -1,0 +1,36 @@
+AIM:- SQL Injection Attack
+- Identify a web application vulnerable to SQL injection.
+- Craft and execute SQL injection queries to exploit the vulnerability.
+- Extract sensitive information or manipulate the database through the SQL injection attack. 
+
+------------------------------------------------------------------------------------------------
+
+Notes:-
+Download DVWA from https://sourceforge.net/projects/dvwa.mirror/ and extract the files.
+Copy the DVWA folder into “C:\xampp\htdocs\xampp\DVWA”.
+Rename the config file in “C:\xampp\htdocs\xampp\DVWA\config” and rename the file from config.inc.php.dist to config.inc.php
+Open config file, clear the password, update user to root, add your MySQL port no to port and server.
+
+STEP 1:- Open Xampp control panel and start apache and MySQL.
+
+STEP 2:- In Browser, open http://localhost/xampp/DVWA/setup.php
+
+STEP 3:- Click on Create/Reset Database.
+
+STEP 4:- Login with Username as ‘admin’ and Password as ‘password’.
+
+STEP 5:- Set the DVWA security level in DVWA security tab to low and click on submit.
+
+STEP 6:- Navigate to SQL Injection Tab.
+
+STEP 7:- In User ID Section enter 1 and Click on Submit.
+
+STEP 8:- In User ID Section enter 2 and Click on Submit.
+
+STEP 9:- In User ID Section enter 3 and Click on Submit.
+
+STEP 10:- In User ID Section enter 4 and Click on Submit.
+
+STEP 11:- In User ID Section enter 1=1 and Click on Submit.
+
+STEP 12:- In User ID Section enter a ‘ or’’=’ and Click on Submit.
