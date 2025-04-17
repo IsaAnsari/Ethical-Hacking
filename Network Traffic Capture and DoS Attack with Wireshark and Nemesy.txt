@@ -1,0 +1,46 @@
+AIM:- Network Traffic Capture and DoS Attack with Wireshark and Nemesy
+> Network Traffic Capture:
+    - Use Wireshark to capture network traffic on a specific network interface.
+    - Analyze the captured packets to extract relevant information and identify potential security issues.
+> Denial of Service (DoS) Attack:
+    - Use Nemesy to launch a DoS attack against a target system or network.
+    - Observe the impact of the attack on the target's availability and performance.
+
+---------------------------------------------------------------------------------------------------------------
+
+__________________________
+a) Network Traffic Capture
+
+STEP 1:- Open WireShark.
+
+STEP 2:- Select Connection and capture network packets on that connection.
+
+STEP 3:- In the Browser, Go to http://testphp.vulnweb.com/login.php and login using username=test, password=test.
+
+STEP 4:- In WireShark, Go to filter and type http.request.method==”GET”. It will return the packets with get method.
+
+STEP 5:- Go to filter and type http.request.method==”POST”. It will return the packets with post method.
+In details tab, Go to HTML Form URL Encoded. It will display the username and password of sites you logged in.
+
+________________________________________________
+b) Denial of Service (DoS) Attack (Using Nemesy)
+
+STEP 1:- Disable Antivirus from your device.
+
+STEP 2:- Install and Run nemesy13 from http://packetstormsecurity.com/files/25599/nemesy13.zip.html
+
+STEP 3:- Set Victim IP, Packets details like Number, Size and Delay and then click on Send to initiate.
+
+_____________________________________________
+c) Denial of Service (DoS) Attack (Using CMD)
+
+Step 1:- Open CMD, and type ‘ping -t -l 65500 192.168.125.1’
+
+Step 2:- Open WireShark and check packets received.
+
+_____________________________________________________________
+d) Denial of Service (DoS) Attack (Using Kali Linux Terminal)
+
+Step 1:- Open Kali Linux termianal and type ‘sudo hping3 -i u40 -S -p 80 -c 100000 192.168.13.1’
+
+Step 2:- Open WireShark and check packets received.
