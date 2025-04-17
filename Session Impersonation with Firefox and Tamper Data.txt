@@ -1,0 +1,34 @@
+AIM:- Session Impersonation with Firefox and Tamper Data
+- Install and configure the Tamper Data add-on in Firefox.
+- Intercept and modify HTTP requests to impersonate a user's session.
+- Understand the impact of session impersonation and the importance of session management.
+
+-----------------------------------------------------------------------------------------------
+
+STEP 1:- Open FireFox and Go to Add-ons.
+
+STEP 2:- Add “Tamper Data for FF Quantum” Extension.
+
+STEP 3:- Add “Cookie-Editor” Extension.
+
+STEP 4:- Go to http://www.techpanda.org/index.php
+
+STEP 5:- Enter Email as ‘admin@google.com’ and Password as ‘Password2010’ and click on submit.
+
+STEP 6:- It will display the dashboard.
+
+STEP 7:- Click on Cookie-Editor Add-on. Copy the Session ID from there.
+
+STEP 8:- Don’t Log out and Cloae the Tab.
+
+STEP 9:- Start Tamper Data Add-on and click on Yes.
+
+STEP 10:- Go to http://www.techpanda.org/ and Click on OK.
+
+STEP 11:- Paste the Copied Session ID in Cookie tab and Click on OK.
+
+STEP 12:- Go to http://www.techpanda.org/dashboard.php and Click on OK.
+
+STEP 13:- Paste the Copied Session ID in Cookie tab and Click on OK.
+
+STEP 14:- You will be logged in to dashboard directly without logging in.
