@@ -1,0 +1,32 @@
+AIM:- Persistent Cross-Site Scripting Attack
+- Set up a vulnerable web application that is susceptible to persistent XSS attacks.
+- Craft a malicious script to exploit the XSS vulnerability and execute arbitrary code.
+- Observe the consequences of the attack and understand the potential risks associated with XSS vulnerabilities. 
+
+----------------------------------------------------------------------------------------------------------------------
+
+Notes:-
+
+Download DVWA from https://sourceforge.net/projects/dvwa.mirror/ and extract the files.
+Copy the DVWA folder into “C:\xampp\htdocs\xampp\DVWA”.
+Rename the config file in “C:\xampp\htdocs\xampp\DVWA\config” and rename the file from config.inc.php.dist to config.inc.php
+Open config file, clear the password, update user to root, add your MySQL port no to port and server.
+
+STEP 1:- Open Xampp control panel and start apache and MySQL.
+
+STEP 2:- In Browser, open http://localhost/xampp/DVWA/setup.php
+
+STEP 3:- Click on Create/Reset Database.
+
+STEP 4:- Login with Username as ‘admin’ and Password as ‘password’.
+
+STEP 5:- Set the DVWA security level in DVWA security tab to low and click on submit.
+
+STEP 6:- Click on XSS(Stored)  Fille the Name and write script code as follows:
+<script>
+{
+    alert(“Hello”)
+}
+</script>
+
+STEP 7:- Click on Sign Guestbook.
